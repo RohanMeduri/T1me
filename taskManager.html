@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <img src="T1me.png" alt="T1ME Logo" style="width:200px; height:100px;">
+    <title>T1ME - Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+        <p class="muted">Manage your tasks and track progress!</p>
+        <a href="main.html" class="button">Back to Main Page</a>
+    </header>
+
+    <main class="container">
+        <section class="panel" id="task-input-panel">
+            <h2>Add New Tasks</h2>
+            <label>Enter Tasks (one per line)
+                <textarea id="entry-checklist" 
+                    placeholder="Example:
+task1
+task2
+task3" rows="5"></textarea>
+            </label>
+            <div class="row">
+                <button id="add-checklist-item">Add Tasks</button>
+            </div>
+        </section>
+
+        <section class="panel" id="tasks-list-panel">
+            <h2>Your Tasks</h2>
+            <div class="tasks-container">
+                <div class="task-filters">
+                    <button class="filter active" data-filter="all">All</button>
+                    <button class="filter" data-filter="active">Active</button>
+                    <button class="filter" data-filter="completed">Completed</button>
+                </div>
+                <div id="tasks-list">
+                </div>
+                <div class="task-summary">
+                    <span id="tasks-count">0 tasks remaining</span>
+                    <button id="clear-completed">Clear Completed</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="taskManager.js"></script>
+</body>
+</html>

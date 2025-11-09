@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Journal + Time Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="T1me.png" alt="T1ME Logo" style="width:200px; height:100px;">
+    <p class="muted">T1ME allows users to write entries locally, with an option to export to disk. It has a built-in Pomodoro timer for focus.</p>
+  </header>
+  <a class="button" href="taskManager.html">Task Manager</a> <br><br>
+  <main class="container">
+    <section class="panel" id="journal-panel">
+      <h2>New Entry</h2>
+      <label>Title
+        <input id="entry-title" placeholder="Short title">
+      </label>
+
+      <label>Tags (comma-separated)
+        <input id="entry-tags" placeholder="work, ideas">
+      </label>
+
+      <label>Entry
+        <textarea id="entry-body" placeholder="Write your journal entry here..." rows="10"></textarea>
+      </label>
+
+      <div class="row">
+        <button id="save-local">Save to local</button>
+        <button id="clear-all" class="danger">Clear all</button>
+      </div>
+
+      <h3>Saved entries</h3>
+      <ul id="entries-list" class="list"></ul>
+    </section>
+
+    <section class="panel" id="timer-panel">
+      <h2>Pomodoro Timer</h2>
+      <div class="timer-display">
+        <div id="timer-clock">25:00</div>
+        <div id="timer-desc">Ready</div>
+      </div>
+
+      <div class="controls">
+        <label>Work (min)
+          <input type="number" id="work-min" min="1" value="25">
+        </label>
+        <label>Short break (min)
+          <input type="number" id="short-min" min="1" value="5">
+        </label>
+        <label>Long break (min)
+          <input type="number" id="long-min" min="1" value="15">
+        </label>
+      </div>
+
+      <div class="row">
+        <button id="start-timer">Start</button>
+        <button id="pause-timer">Pause</button>
+        <button id="reset-timer">Reset</button>
+      </div>
+
+      <div class="row small">
+        <button id="attach-current" title="Attach current entry to session log">Attach current entry to session</button>
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
